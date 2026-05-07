@@ -1,8 +1,5 @@
 /**
  * Получить карточку персонажа
- *
- * @param character
- * @returns {string}
  */
 function getCharacterCard(character) {
   return `
@@ -31,9 +28,6 @@ function getCharacterCard(character) {
 
 /**
  * Получить модальное окно персонажа
- *
- * @param character
- * @returns {string}
  */
 function getCharacterModal(character) {
   return `
@@ -83,23 +77,19 @@ function getCharacterModal(character) {
  */
 async function fetchCharacters() {
   try {
-    // Вставьте сюда вашу ссылку на API (которую скинули в унике)
     const response = await fetch(
       "https://jsfree-les-3-api.onrender.com/characters",
     );
     const data = await response.json();
-    return data; // предположим, что API возвращает массив персонажей
+    return data;
   } catch (error) {
     console.error("Ошибка загрузки:", error);
-    return []; // если ошибка — возвращаем пустой массив
+    return [];
   }
 }
 
 /**
  * Получить массив карточек персонажей
- *
- * @param characters
- * @returns {Array}
  */
 function getCharacterCards(characters) {
   let cards = [];
@@ -111,9 +101,6 @@ function getCharacterCards(characters) {
 
 /**
  * Получить массив модальных окон персонажей
- *
- * @param characters
- * @returns {Array}
  */
 function getCharacterModals(characters) {
   let modals = [];
