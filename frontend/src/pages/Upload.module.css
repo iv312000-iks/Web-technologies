@@ -1,0 +1,109 @@
+.main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 28px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dropzone {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-lg);
+  padding: 48px 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+.dropzone:hover, .dropzone.hasFile {
+  border-color: var(--accent);
+  background: rgba(61, 79, 196, 0.08);
+}
+
+.uploadIcon { color: var(--text-muted); margin-bottom: 12px; }
+.fileIcon { font-size: 40px; margin-bottom: 8px; }
+
+.dropText {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.dropHint {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.fileName {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  word-break: break-all;
+}
+
+.fileSize {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.textarea { resize: vertical; min-height: 100px; }
+
+.progressWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progressBar {
+  flex: 1;
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 3px;
+  transition: width 0.3s;
+}
+
+.progressText {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  min-width: 36px;
+}
+
+.errorMsg {
+  color: #e05c5c;
+  background: rgba(224, 92, 92, 0.1);
+  border: 1px solid rgba(224, 92, 92, 0.3);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+}
+
+.changeFile {
+  background: none;
+  border: 1px solid rgba(124,58,237,0.4);
+  color: #7c3aed;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-family: 'Manrope', sans-serif;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+.changeFile:hover { background: rgba(124,58,237,0.08); }

@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    environment:
+      - SECRET_KEY=yabro-prod-secret
+      - JWT_SECRET_KEY=yabro-jwt-prod
+      - DATABASE_URL=postgresql://yabro:yabro@db:5432/yabro
+    volumes:
+      - uploads:/app/uploads
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+  db:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_DB=yabro
+      - POSTGRES_USER=yabro
+      - POSTGRES_PASSWORD=yabro
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  uploads:
+  pgdata:
