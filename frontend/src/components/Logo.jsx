@@ -16,7 +16,7 @@ export default function YabroLogo({ size = 56 }) {
         fontSize="18"
         fill="white"
       >
-        YA
+        YU
       </text>
       <text
         x="4"
@@ -26,7 +26,7 @@ export default function YabroLogo({ size = 56 }) {
         fontSize="18"
         fill="white"
       >
-        DRO
+        TB
       </text>
     </svg>
   );
